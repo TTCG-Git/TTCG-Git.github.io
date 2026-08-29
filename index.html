@@ -5,170 +5,133 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>To The Carp Gods</title>
   <meta name="description" content="From bottle to bank. From shakes to soil. TTCG Communities. Carp angling, recovery, and the work, lived in Cornwall." />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%23080807'/%3E%3Ccircle cx='32' cy='32' r='29.2' fill='none' stroke='%23CBA268' stroke-width='1.15'/%3E%3Ctext x='32' y='37.5' text-anchor='middle' font-family='Arial Narrow,sans-serif' font-size='13' font-weight='700' fill='%23F5F2E9' letter-spacing='2.4'%3ETTCG%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="/logo-192.png" />
+  <link rel="apple-touch-icon" href="/logo-192.png" />
+  <meta property="og:title" content="To The Carp Gods" />
+  <meta property="og:description" content="From bottle to bank. From shakes to soil. TTCG Communities. Carp angling, recovery, and the work, lived in Cornwall." />
+  <meta property="og:image" content="https://tothecarpgods.com/og.jpg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #080807;
-      --elev: #141411;
-      --fg: #f5f2e9;
-      --muted: #9a9588;
-      --faint: #6b675c;
-      --accent: #cba268;
-      --moss: #6b705c;
-      --border: rgb(245 242 233 / 0.12);
-    }
-    * { box-sizing: border-box; }
-    html, body { margin: 0; background: var(--bg); color: var(--fg); }
-    body { font-family: 'Source Serif 4', Georgia, serif; line-height: 1.55; }
-    a { color: inherit; text-decoration: none; }
-    h1, h2, h3, .display {
-      font-family: 'Barlow Condensed', 'Arial Narrow', sans-serif;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      line-height: 0.95;
-      margin: 0;
-    }
-    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-    header {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 18px 0; border-bottom: 1px solid var(--border);
-    }
-    .mark { display: flex; align-items: center; gap: 12px; }
-    .mark svg { width: 42px; height: 42px; }
-    .mark span { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.16em; font-size: 13px; }
-    nav { display: flex; gap: 18px; font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.14em; font-size: 13px; text-transform: uppercase; color: var(--muted); flex-wrap: wrap; }
-    nav a:hover { color: var(--accent); }
-    .hero { padding: 64px 0 48px; }
-    .kicker { font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.28em; font-size: 13px; color: var(--accent); text-transform: uppercase; }
-    h1 { font-size: clamp(2.6rem, 8vw, 5rem); font-weight: 800; margin-top: 18px; }
-    .lead { max-width: 34rem; color: var(--muted); font-size: 1.15rem; margin-top: 24px; }
-    .testimony { margin-top: 14px; }
-    .row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center;
-      background: var(--accent); color: #080807; font-family: 'Barlow Condensed', sans-serif;
-      letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700;
-      padding: 14px 22px; border-radius: 6px;
-    }
-    .btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--border); }
-    .pillars { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--border); background: var(--elev); }
-    .pillar { padding: 28px 22px; border-right: 1px solid var(--border); }
-    .pillar:last-child { border-right: 0; }
-    .pillar h2 { font-size: 1.4rem; }
-    .pillar p { color: var(--muted); margin: 12px 0 0; }
-    section { padding: 72px 0; }
-    section.alt { background: var(--elev); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
-    .doors { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
-    .door { border: 1px solid var(--border); padding: 22px; background: var(--bg); min-height: 180px; display: flex; flex-direction: column; justify-content: space-between; }
-    .door small { font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.18em; color: var(--accent); text-transform: uppercase; font-size: 12px; }
-    .door h3 { font-size: 1.5rem; margin-top: 10px; }
-    .door p { color: var(--muted); margin: 10px 0 16px; }
-    .door a { color: var(--accent); font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.12em; text-transform: uppercase; font-size: 13px; }
-    .tiers { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
-    .tier { border: 1px solid var(--border); padding: 28px; background: var(--bg); }
-    .tier .price { font-size: 2.4rem; margin-top: 12px; }
-    .tier ul { color: var(--muted); padding-left: 18px; }
-    footer { padding: 40px 0 64px; color: var(--faint); font-size: 0.95rem; border-top: 1px solid var(--border); }
-    footer a { color: var(--accent); }
-    @media (max-width: 820px) {
-      .pillars, .doors, .tiers { grid-template-columns: 1fr; }
-      .pillar { border-right: 0; border-bottom: 1px solid var(--border); }
-    }
-  </style>
+  <link rel="stylesheet" href="/css/site.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <a class="mark" href="#top">
-        <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="31" fill="#080807"/><circle cx="32" cy="32" r="29.2" fill="none" stroke="#CBA268" stroke-width="1.15"/><text x="32" y="37.5" text-anchor="middle" font-family="Arial Narrow, sans-serif" font-size="13" font-weight="700" fill="#F5F2E9" letter-spacing="2.4">TTCG</text></svg>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="mark" href="/">
+        <img src="/logo-192.png" alt="To The Carp Gods" width="40" height="40" />
         <span>To The Carp Gods</span>
       </a>
-      <nav>
-        <a href="#join">Join</a>
-        <a href="#work">The work</a>
-        <a href="#support">Support</a>
-        <a href="https://www.patreon.com/c/TTCG_Communities">Patreon</a>
+      <nav class="desk" aria-label="Primary">
+          <a href="/journal/">Journal</a>
+          <a href="/community/">Community</a>
+          <a href="/recovery/">Recovery</a>
+          <a href="/support/">Support</a>
+          <a href="/about/">About</a>
+        <a class="btn" href="/join/">Join</a>
       </nav>
-    </header>
-
-    <section class="hero" id="top">
-      <p class="kicker">TTCG Communities · Cornwall</p>
-      <h1>From bottle<br>to bank.<br>From shakes<br>to soil.</h1>
-      <p class="lead">Carp angling as a way to live. Recovery. Allotment. First light. The people who actually show up.</p>
-      <p class="testimony">It is not a brand. It is a testimony.</p>
+      <button class="burger" type="button" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+    <div class="wrap">
+      <nav class="mobile" aria-label="Mobile">
+          <a href="/journal/">Journal</a>
+          <a href="/community/">Community</a>
+          <a href="/recovery/">Recovery</a>
+          <a href="/support/">Support</a>
+          <a href="/about/">About</a>
+        <a class="btn" href="/join/" style="margin-top:12px">Join the groups</a>
+      </nav>
+    </div>
+  </header>
+  
+<main>
+  <section class="wrap hero">
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">TTCG Communities · Cornwall</p>
+        <h1>From bottle<br>to bank.<br>From shakes<br>to soil.</h1>
+        <p class="lead">Carp angling as a way to live. Recovery. Allotment. First light. The people who actually show up.</p>
+        <p class="fg">It is not a brand. It is a testimony.</p>
+        <div class="row">
+          <a class="btn" href="/join/">Join the groups</a>
+          <a class="btn ghost" href="/journal/">Read the journal</a>
+        </div>
+      </div>
+      <figure>
+        <img class="photo" src="/images/first-light.jpg" alt="First light and mist over a still Cornish lake" />
+        <figcaption class="cap">First light. The bank does not perform.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <div class="pillars"><article class="pillar"><p class="kicker">01</p><h2>Community</h2><p class="line">Real tribes. Bank, soil, and the groups.</p><p class="body">No fake positivity. Honest people sharing stories, catching each other, growing in public. The photo-drop is the door. The groups are the room.</p></article><article class="pillar"><p class="kicker">02</p><h2>Education</h2><p class="line">Skills that cross over.</p><p class="body">The patience that puts a carp on the mat is the same patience that rebuilds a life. Rigs, bait, watercraft. Soil, cooking, showing up. Teach the craft. Keep the metaphor honest.</p></article><article class="pillar"><p class="kicker">03</p><h2>Recovery</h2><p class="line">Lived first. Peer support, not therapy.</p><p class="body">Addiction, mental health, the quiet after the noise. Nature, discipline, and people who have been there. We are not clinicians. We are proof that the bank and the soil still work.</p></article><article class="pillar"><p class="kicker">04</p><h2>Stewardship</h2><p class="line">Personal healing and the land are the same work.</p><p class="body">Look after the water that holds you. Look after the soil that feeds you. Responsible angling. Regenerative growing. Leave it better than you found it.</p></article></div>
+  <section>
+    <div class="wrap">
+      <p class="kicker">The photo-drop</p>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-top:12px">One ask. Zero friction.</h2>
+      <p class="lead">The post that moved 32 thousand views was not clever. Last fishing photo on your phone. Big white caps on black. That is the engine. Morning ask. Evening story. The groups hold the replies.</p>
+      <div class="asks"><article class="ask"><p class="kicker" style="color:var(--faint)">Monday</p><p class="q">ONE PERCENT<br>WINS THIS WEEK<br>WHAT MOVED<br>THE NEEDLE?</p></article><article class="ask"><p class="kicker" style="color:var(--faint)">Tuesday</p><p class="q">LET’S SEE THE LAST<br>FISHING PHOTO<br>YOU TOOK<br>ON YOUR PHONE</p></article><article class="ask"><p class="kicker" style="color:var(--faint)">Wednesday</p><p class="q">SHOW US YOUR SPOT<br>BANK, SOIL<br>OR QUIET CORNER</p></article><article class="ask"><p class="kicker" style="color:var(--faint)">Sunday</p><p class="q">SOIL OR WATER<br>WHERE DOES<br>YOUR HEAD RESET?</p></article></div>
+    </div>
+  </section>
+  <section class="split">
+    <img src="/images/bank.jpg" alt="Used carp gear on wet grass at the water's edge" />
+    <div class="copy">
+      <p class="kicker">Living proof</p>
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem);margin-top:12px">Sober since 30 March 2022.</h2>
+      <p class="lead">Coming up on a year medication-free. Chef. Horticulture. More than 35 years with a rod. The bank held me. The soil is doing the rest. If you are in it, you already know. If you are not, the groups are open.</p>
+      <div class="row"><a class="btn ghost" href="/recovery/">Recovery, as we actually live it</a></div>
+    </div>
+  </section>
+  <section>
+    <div class="wrap">
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem)">From the journal</h2>
+      <div class="cards"><article class="card"><a href="/journal/be-where-your-feet-are/"><img class="photo" src="/images/first-light.jpg" alt="First light and mist over a still Cornish lake, empty bank in the foreground" /><p class="meta">Bank · 28 August 2026</p><h3>Be where your feet are.</h3><p class="muted">The past creates a weight. The future creates noise. This moment on the bank is the only one that can hold you.</p></a></article><article class="card"><a href="/journal/survival-does-not-run-the-rest/"><img class="photo" src="/images/last-light.jpg" alt="Last light on still water, dark trees and a gold line on the surface" /><p class="meta">Recovery · 24 August 2026</p><h3>Survival got me here. It does not get to run the rest.</h3><p class="muted">The version of me that survived is not the same man who gets to live. Healing is not a new personality. It is taking the noise off the old one.</p></a></article><article class="card"><a href="/journal/from-bottle-to-bank/"><img class="photo" src="/images/bank.jpg" alt="Landing net and unhooking mat on wet grass at a Cornish lake at dawn" /><p class="meta">Living proof · 20 August 2026</p><h3>From bottle to bank. From shakes to soil.</h3><p class="muted">Sober since 30 March 2022. The bank held me when the rooms could not. The soil is doing the rest.</p></a></article></div>
+      <p style="margin-top:28px"><a class="kicker" href="/journal/">All entries</a></p>
+    </div>
+  </section>
+  <section class="band">
+    <div class="wrap">
+      <h2 style="font-size:clamp(1.8rem,4vw,2.6rem)">Three doors. That is the lot.</h2>
+      <ol class="ol">
+        <li><strong class="fg">1. Groups.</strong> Free. Drop a photo. Stay for the people.</li>
+        <li><strong class="fg">2. Journal.</strong> The longer story. Bank, soil, recovery, the work.</li>
+        <li><strong class="fg">3. Patreon.</strong> How this stays standing. Session reports. The entries that do not belong on Instagram.</li>
+      </ol>
       <div class="row">
-        <a class="btn" href="#join">Join the groups</a>
-        <a class="btn ghost" href="https://www.patreon.com/c/TTCG_Communities">Open Patreon</a>
-      </div>
-    </section>
-  </div>
-
-  <div class="pillars" id="work">
-    <article class="pillar"><h2>Community</h2><p>Real tribes. Bank, soil, and the groups. Honest people. No fake positivity.</p></article>
-    <article class="pillar"><h2>Education</h2><p>Rigs, bait, watercraft. Soil, cooking, showing up. Teach the craft. Keep the metaphor honest.</p></article>
-    <article class="pillar"><h2>Recovery</h2><p>Lived first. Peer support, not therapy. Nature, discipline, and people who have been there.</p></article>
-    <article class="pillar"><h2>Stewardship</h2><p>Look after the water that holds you. Look after the soil that feeds you.</p></article>
-  </div>
-
-  <section id="join">
-    <div class="wrap">
-      <p class="kicker">Join</p>
-      <h2 style="font-size: clamp(2rem, 5vw, 3.4rem); margin-top: 12px;">Pick a door. Walk through it.</h2>
-      <p class="lead">One page so every platform points home, and home points you to a real room.</p>
-      <div class="doors">
-        <article class="door"><div><small>Start here</small><h3>Public group</h3><p>The photo-drop. Last fishing photo on your phone. Your spot. What moved the needle.</p></div><a href="https://www.facebook.com/groups/tothecarpgods.public">Open Public</a></article>
-        <article class="door"><div><small>The craft</small><h3>Education group</h3><p>Rigs, bait, watercraft, growing, cooking. Teach and be taught.</p></div><a href="https://www.facebook.com/groups/ttcgeducation">Open Education</a></article>
-        <article class="door"><div><small>Slower room</small><h3>Members group</h3><p>Longer stories. People who are actually in it.</p></div><a href="https://www.facebook.com/groups/tothecarpgods">Open Members</a></article>
-        <article class="door"><div><small>Public face</small><h3>Instagram</h3><p>@ttcg_communities. Same voice. Same asks.</p></div><a href="https://www.instagram.com/ttcg_communities">Open Instagram</a></article>
-        <article class="door"><div><small>The inside</small><h3>Patreon</h3><p>Bankside £6. The Work £12. Session reports. Recovery entries. No algorithm.</p></div><a href="https://www.patreon.com/c/TTCG_Communities">Open Patreon</a></article>
-        <article class="door"><div><small>Page</small><h3>Facebook page</h3><p>TTCG Communities. The only page we post from. Groups do the talking.</p></div><a href="https://www.facebook.com/TTCGcommunities">Open Page</a></article>
+        <a class="btn" href="/join/">Start in the groups</a>
+        <a class="btn ghost" href="/support/">Support the work</a>
       </div>
     </div>
   </section>
+</main>
 
-  <section class="alt" id="support">
-    <div class="wrap">
-      <p class="kicker">Patreon</p>
-      <h2 style="font-size: clamp(2rem, 5vw, 3.4rem); margin-top: 12px;">How this stays standing.</h2>
-      <p class="lead">Groups stay free. The journal stays readable. Patreon is the roof. Two prices. That is the lot.</p>
-      <div class="tiers">
-        <article class="tier">
-          <p class="kicker">Bankside</p>
-          <p class="price display">£6 / month</p>
-          <p>A pint. The inside, without the algorithm.</p>
-          <ul>
-            <li>Full journal entries</li>
-            <li>Session notes when I have been on the bank</li>
-            <li>Growing diary</li>
-            <li>The bits that do not fit Instagram</li>
-          </ul>
-          <a class="btn" href="https://www.patreon.com/c/TTCG_Communities">Join on Patreon</a>
-        </article>
-        <article class="tier">
-          <p class="kicker">The Work</p>
-          <p class="price display">£12 / month</p>
-          <p>If this is already how you live.</p>
-          <ul>
-            <li>Everything in Bankside</li>
-            <li>Monthly voice note from the bank or the plot</li>
-            <li>Recovery reflections I will not post publicly</li>
-            <li>First look at guides and film</li>
-          </ul>
-          <a class="btn" href="https://www.patreon.com/c/TTCG_Communities">Join on Patreon</a>
-        </article>
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <div>
+        <img src="/logo-192.png" alt="" width="56" height="56" style="border-radius:999px" />
+        <p class="display" style="font-size:1.25rem;margin-top:14px">Transform Thrive Create Grow</p>
+        <p class="muted" style="max-width:22rem">It is not a brand. It is a testimony. Carp angling, recovery, soil and water. Lived in Cornwall. Held by the people who show up.</p>
+      </div>
+      <div>
+        <p class="kicker" style="color:var(--faint)">On this site</p>
+        <p style="margin-top:14px"><a href="/journal/">Journal</a></p>
+        <p><a href="/community/">Community</a></p>
+        <p><a href="/recovery/">Recovery</a></p>
+        <p><a href="/support/">Support</a></p>
+        <p><a href="/about/">About</a></p>
+        <p><a href="/join/">Join</a></p>
+        <p><a href="/contact/">Contact</a></p>
+      </div>
+      <div>
+        <p class="kicker" style="color:var(--faint)">Out there</p>
+        <p style="margin-top:14px"><a href="https://www.instagram.com/ttcg_communities" target="_blank" rel="noreferrer">Instagram</a></p>
+        <p><a href="https://www.facebook.com/TTCGcommunities" target="_blank" rel="noreferrer">Facebook</a></p>
+        <p><a href="https://x.com/ToTheCarpGods" target="_blank" rel="noreferrer">X</a></p>
+        <p><a href="https://www.youtube.com/@Tothecarpgods" target="_blank" rel="noreferrer">YouTube</a></p>
+        <p><a href="https://www.patreon.com/c/TTCG_Communities" target="_blank" rel="noreferrer">Patreon</a></p>
+        <p class="faint" style="margin-top:28px">To The Carp Gods Ltd<br>Cornwall, United Kingdom<br><a href="mailto:chris@tothecarpgods.com">chris@tothecarpgods.com</a></p>
       </div>
     </div>
-  </section>
-
-  <div class="wrap">
-    <footer>
-      <p>To The Carp Gods Ltd · Cornwall · <a href="mailto:chris@tothecarpgods.com">chris@tothecarpgods.com</a></p>
-      <p>Sober since 30 March 2022. Transform Thrive Create Grow.</p>
-      <p>#TTCGcommunities #TTCGeducation #ToTheCarpGods</p>
-    </footer>
-  </div>
+  </footer>
+  <script src="/js/site.js"></script>
 </body>
 </html>
