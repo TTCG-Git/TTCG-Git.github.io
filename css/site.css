@@ -118,3 +118,20 @@ label span { font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.18em
   .cta { display: none; }
   .two { display: grid; gap: 28px; }
 }
+.packs { display: grid; gap: 8px; }
+@media (min-width: 640px) { .packs { grid-template-columns: 1fr 1fr; } }
+.pack {
+  min-height: 64px; text-align: left; width: 100%;
+  border: 1px solid var(--border); background: var(--elev);
+  padding: 12px 16px; border-radius: 4px; color: inherit;
+  cursor: pointer; font: inherit;
+}
+.pack.on { border-color: var(--accent); }
+.pack .day { font-family: 'Barlow Condensed', sans-serif; letter-spacing: 0.18em; font-size: 11px; text-transform: uppercase; color: var(--faint); display: block; }
+.pack .line { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; letter-spacing: 0.08em; font-size: 14px; text-transform: uppercase; display: block; margin-top: 4px; }
+.span2 { grid-column: 1 / -1; }
+.preview { border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--bg); }
+.preview canvas { width: 100%; display: block; }
+.capbox { white-space: pre-wrap; color: var(--muted); font-size: 0.95rem; margin-top: 16px; }
+.studio { display: grid; gap: 40px; }
+@media (min-width: 960px) { .studio { grid-template-columns: 1fr minmax(0, 420px); align-items: start; } }

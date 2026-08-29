@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Photo-drop · To The Carp Gods</title>
+  <meta name="description" content="Free TTCG photo-drop. Make the black graphic. Copy the caption. Post in the public group. Nothing stored." />
+  <link rel="icon" href="/logo-192.png" />
+  <link rel="apple-touch-icon" href="/logo-192.png" />
+  <meta property="og:title" content="Photo-drop · To The Carp Gods" />
+  <meta property="og:description" content="Free TTCG photo-drop. Make the black graphic. Copy the caption. Post in the public group. Nothing stored." />
+  <meta property="og:image" content="https://tothecarpgods.com/og.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap bar">
+      <a class="mark" href="/">
+        <img src="/logo-192.png" alt="To The Carp Gods" width="40" height="40" />
+        <span>To The Carp Gods</span>
+      </a>
+      <nav class="desk" aria-label="Primary">
+          <a href="/journal/">Journal</a>
+          <a href="/community/">Community</a>
+          <a href="/drop/" class="active">Drop</a>
+          <a href="/recovery/">Recovery</a>
+          <a href="/support/">Support</a>
+          <a href="/about/">About</a>
+        <a class="btn" href="/join/">Join</a>
+      </nav>
+      <button class="burger" type="button" aria-expanded="false" aria-label="Open menu">☰</button>
+    </div>
+    <div class="wrap">
+      <nav class="mobile" aria-label="Mobile">
+          <a href="/journal/">Journal</a>
+          <a href="/community/">Community</a>
+          <a href="/drop/">Drop</a>
+          <a href="/recovery/">Recovery</a>
+          <a href="/support/">Support</a>
+          <a href="/about/">About</a>
+        <a class="btn" href="/join/" style="margin-top:12px">Join the groups</a>
+      </nav>
+    </div>
+  </header>
+  
+<main>
+  <section class="wrap hero">
+    <p class="kicker">The photo-drop</p>
+    <h1>One ask. Zero friction.</h1>
+    <p class="lead">The post that moved 32 thousand views was not clever. Last fishing photo on your phone. Big white caps on black. Make the graphic. Post it. The group holds the replies.</p>
+  </section>
+  <section class="wrap" style="padding-top:0">
+    <div class="studio">
+      <div>
+        <p class="kicker">Pick an ask</p>
+        <div class="packs" id="drop-packs"><button class="pack" type="button" data-id="mon"><span class="day">Monday</span><span class="line">ONE PERCENT WINS</span></button><button class="pack" type="button" data-id="tue"><span class="day">Tuesday</span><span class="line">LET'S SEE THE LAST</span></button><button class="pack" type="button" data-id="wed"><span class="day">Wednesday</span><span class="line">SHOW US</span></button><button class="pack" type="button" data-id="thu"><span class="day">Thursday</span><span class="line">FIRST LIGHT</span></button><button class="pack" type="button" data-id="fri"><span class="day">Friday</span><span class="line">WHO'S BEEN</span></button><button class="pack" type="button" data-id="sat"><span class="day">Saturday</span><span class="line">LAST PHOTO</span></button><button class="pack" type="button" data-id="sun"><span class="day">Sunday</span><span class="line">SOIL OR WATER</span></button>
+          <button class="pack span2" type="button" data-id="custom"><span class="day">Your line</span><span class="line">Write one. Keep it short.</span></button>
+        </div>
+        <label id="custom-wrap" style="display:none;margin-top:22px">
+          <span>The ask. One line per row.</span>
+          <textarea class="field" id="custom-text" placeholder="SOIL OR WATER&#10;WHERE DOES YOUR HEAD RESET?"></textarea>
+        </label>
+        <div class="row">
+          <button class="btn" type="button" id="drop-download">Download the graphic</button>
+          <button class="btn ghost" type="button" id="drop-copy">Copy the caption</button>
+          <a class="btn ghost" href="https://www.facebook.com/groups/tothecarpgods.public" target="_blank" rel="noreferrer">Post in Public</a>
+        </div>
+        <p class="faint" style="margin-top:22px;max-width:36rem">Nothing is uploaded. The file stays on your phone. The group is where the photo lives. That is the whole engine.</p>
+      </div>
+      <div>
+        <div class="preview"><canvas id="drop-canvas" width="1080" height="1350"></canvas></div>
+        <pre class="capbox" id="drop-caption"></pre>
+      </div>
+    </div>
+  </section>
+</main>
+<script>window.TTCG_DROP_ASKS = [{"id": "mon", "day": "Monday", "lines": ["ONE PERCENT WINS", "THIS WEEK"], "sub": "WHAT MOVED THE NEEDLE?", "caption": "One percent wins this week.\n\nBank, soil, kitchen, head. One small thing that moved.\n\nDrop it below.\n\nTransform Thrive Create Grow\n#TTCGcommunities #TTCGeducation #ToTheCarpGods"}, {"id": "tue", "day": "Tuesday", "lines": ["LET'S SEE THE LAST", "FISHING PHOTO", "YOU TOOK ON", "YOUR PHONE"], "sub": "", "caption": "Let’s see it then.\n\nLast fishing photo on your phone. Doesn’t have to be a thirty. Doesn’t have to be pretty.\n\nDrop it.\n\nTransform Thrive Create Grow\n#TTCGcommunities #TTCGeducation #ToTheCarpGods"}, {"id": "wed", "day": "Wednesday", "lines": ["SHOW US", "YOUR SPOT"], "sub": "BANK, SOIL OR QUIET CORNER", "caption": "Show us your spot.\n\nBank, allotment, kitchen table, quiet corner. Wherever you actually reset.\n\nDrop a photo.\n\nTransform Thrive Create Grow\n#TTCGcommunities #TTCGeducation #ToTheCarpGods"}, {"id": "thu", "day": "Thursday", "lines": ["FIRST LIGHT", "OR", "LAST LIGHT"], "sub": "WHICH ONE SAVES YOU?", "caption": "No overthinking this one.\n\nFirst light or last light. Which one saves you.\n\nOne word is enough. A photo is better.\n\nTransform Thrive Create Grow\n#TTCGcommunities #TTCGeducation #ToTheCarpGods"}, {"id": "fri", "day": "Friday", "lines": ["WHO'S BEEN", "PUTTING THE", "WORK IN"], "sub": "TAG THEM", "caption": "Who’s been putting the work in lately.\n\nBank, garden, staying clean, staying present. Tag them.\n\nLet’s give it back.\n\nTransform Thrive Create Grow\n#TTCGcommunities #TTCGeducation #ToTheCarpGods"}, {"id": "sat", "day": "Saturday", "lines": ["LAST PHOTO", "THAT ACTUALLY", "MEANT SOMETHING"], "sub": "DROP IT", "caption": "Last photo on your phone that actually meant something.\n\nNot the perfect one. The real one.\n\nDrop it.\n\nTransform Thrive Create Grow\n#TTCGcommunities #TTCGeducation #ToTheCarpGods"}, {"id": "sun", "day": "Sunday", "lines": ["SOIL OR WATER"], "sub": "WHERE DOES YOUR HEAD RESET?", "caption": "Soil or water.\n\nWhere does your head reset. Pick one. Photo if you’ve got it.\n\nTransform Thrive Create Grow\n#TTCGcommunities #TTCGeducation #ToTheCarpGods"}];</script>
+<script src="/js/drop.js"></script>
+
+  <footer class="site-footer">
+    <div class="wrap foot">
+      <div>
+        <img src="/logo-192.png" alt="" width="56" height="56" style="border-radius:999px" />
+        <p class="display" style="font-size:1.25rem;margin-top:14px">Transform Thrive Create Grow</p>
+        <p class="muted" style="max-width:22rem">It is not a brand. It is a testimony. Carp angling, recovery, soil and water. Lived in Cornwall. Held by the people who show up.</p>
+      </div>
+      <div>
+        <p class="kicker" style="color:var(--faint)">On this site</p>
+        <p style="margin-top:14px"><a href="/journal/">Journal</a></p>
+        <p><a href="/community/">Community</a></p>
+        <p><a href="/drop/">Drop</a></p>
+        <p><a href="/recovery/">Recovery</a></p>
+        <p><a href="/support/">Support</a></p>
+        <p><a href="/about/">About</a></p>
+        <p><a href="/join/">Join</a></p>
+        <p><a href="/contact/">Contact</a></p>
+      </div>
+      <div>
+        <p class="kicker" style="color:var(--faint)">Out there</p>
+        <p style="margin-top:14px"><a href="https://www.instagram.com/ttcg_communities" target="_blank" rel="noreferrer">Instagram</a></p>
+        <p><a href="https://www.facebook.com/TTCGcommunities" target="_blank" rel="noreferrer">Facebook</a></p>
+        <p><a href="https://x.com/ToTheCarpGods" target="_blank" rel="noreferrer">X</a></p>
+        <p><a href="https://www.youtube.com/@Tothecarpgods" target="_blank" rel="noreferrer">YouTube</a></p>
+        <p><a href="https://www.patreon.com/c/TTCG_Communities" target="_blank" rel="noreferrer">Patreon</a></p>
+        <p class="faint" style="margin-top:28px">To The Carp Gods Ltd<br>Cornwall, United Kingdom<br><a href="mailto:chris@tothecarpgods.com">chris@tothecarpgods.com</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/site.js"></script>
+</body>
+</html>
